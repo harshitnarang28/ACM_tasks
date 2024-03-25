@@ -21,6 +21,14 @@ The google drive link contained a binary file named q which couldn't be ran on a
 3. I thought I have install a virtual machine but after some research I found about Windows Subsystem for Linux(WSL).
 4. I installed Ubuntu 22.04.3 LTS on my computer.
 ![alt text](image.png)
+5. Running the file
+
+### Analyzing the program 
+1. Open the directory in which the file is using cd command
+![alt text](image.png)
+2. Try to print flag by typing 4 (worth a try)
+3. Research about heaps and how to exploit a program using a heap.
+
 ### Understanding the Heap Structure
 The heap memory consisted of:
 - **input_data**: A 5-byte buffer allocated on the heap.
@@ -28,15 +36,6 @@ The heap memory consisted of:
 
 ### Exploitation Procedure
 
-1. **Program Initialization**: The binary was run to understand the initial state of the heap.
-   
-2. **Payload Preparation**: A payload consisting of 32 "X" characters followed by "ACMR" was crafted. This payload was designed to overflow `input_data` and modify `safe_var`.
-
-3. **Executing the Overflow**: The crafted payload was inputted into the program using the "Write to buffer" feature.
-
-4. **Heap State Verification**: Post-overflow, the heap's new configuration was inspected to confirm that `safe_var` now stored "ACMR".
-
-5. **Flag Retrieval**: The option to display the flag was chosen, resulting in the successful retrieval of the flag, which was `acm_ftw`.
 
 ---
 
