@@ -20,7 +20,7 @@ The google drive link contained a binary file named q which couldn't be ran on a
 2. After browsing online I found out that binary files can only be ran on linux terminal.
 3. I thought I have install a virtual machine but after some research I found about Windows Subsystem for Linux(WSL).
 4. I installed Ubuntu 22.04.3 LTS on my computer.
-![alt text](image.png)
+![alt text](image-2.png)
 5. Running the file
 
 ### Analyzing the program 
