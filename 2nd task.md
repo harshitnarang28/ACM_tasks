@@ -54,6 +54,6 @@ The heap memory consisted of:
 
 ---
 ## Key Takeaways
-This challenge provided a practical demonstration of the dangers associated with heap overflow vulnerabilities. It emphasized the critical role of proper bounds checking in software development. Furthermore, it highlighted the effectiveness of manual memory analysis for understanding and exploiting controlled memory situations.
+This challenge demonstrated the risks of heap overflow vulnerabilities and underscored the importance of thorough bounds checking in software development. Additionally, it showcased the value of manual memory analysis in comprehending and exploiting controlled memory scenarios.
 
 
