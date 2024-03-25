@@ -30,22 +30,29 @@ The google drive link contained a binary file named q which couldn't be ran on a
 3. Research about heaps and how to exploit a program using a heap.
 
 ### Understanding the Heap Structure
+The first thing that came up when I searched for things to exploit in a program containing heaps was heap overflowing.
+
+I did my research about and here's what I learned from it -
+            Heap overflowing, also known as buffer overflow, occurs when a program attempts to write more data into a heap-allocated memory buffer than it can hold, resulting in data overflowing into adjacent memory regions. This can lead to application crashes, unintended behavior, or, in a malicious context, execution of arbitrary code.
+            Consequences:
+                    . Unintended behavior: Applications can malfunction, crash, or produce incorrect outputs.
+                    . Code execution: Attackers may exploit heap overflow to execute arbitrary code, potentially compromising the system.
 The heap memory consisted of:
 - **input_data**: A 5-byte buffer allocated on the heap.
 - **safe_var**: A variable located immediately after `input_data` on the heap. This variable was the target for exploitation, as its content determined whether the flag would be displayed.
 
-### Exploitation Procedure
+### Printing the flag 
+1. When I ran the program and entered 2 to write my custom block of data in the heap and then print the heap I noticed that the text I  wrote got replaced by the ACMR string.
+2. Then I tried again to print the flag but still couldn't print it.
+3. After that I gave a long random string as an input and when I printed the state of heap and it printed the string in the first row and part of the string in the second row 
+4. After counting the characters I noticed a difference of 32 bits in the main string and sub-string .
+5. To overload the heap I knew I had to give a string with 32 characters and then ACMR in it to get ACMR in the bottom row and change the value of safe_var to ACMR
+6. So,I gave **abcdefghijklmnopqrstuvwxyz123456ACMR** as input and I got ACMR in the primary address.
+7. Then I simply tried to print the flag and it worked and I got the flag as **acm_ftw**.
+![alt text](image-1.png)
 
 
 ---
-
-## Tools Utilized
-- Decompilers like Ghidra or IDA Pro for binary analysis.
-- A text editor for payload creation.
-- Terminal for interacting with the binary.
-
----
-
 ## Key Takeaways
 This challenge provided a practical demonstration of the dangers associated with heap overflow vulnerabilities. It emphasized the critical role of proper bounds checking in software development. Furthermore, it highlighted the effectiveness of manual memory analysis for understanding and exploiting controlled memory situations.
 
