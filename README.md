@@ -36,7 +36,7 @@ This Python script automates the process of connecting to a Wi-Fi network that r
 Run the Python script using the following command:
 
 ```bash
-python auto_connect_wifi.py
+python auto_login.py
 
 ```
 
