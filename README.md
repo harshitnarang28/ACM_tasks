@@ -15,13 +15,13 @@ This Python script automates the process of connecting to a Wi-Fi network that r
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/yourrepository.git
+    git clone https://github.com/harshitnarang28/ACM_tasks
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd yourrepository
+    cd ACM_tasks
     ```
 
 3. Create a `credentials.txt` file in the project directory and add your login credentials in the following format:
