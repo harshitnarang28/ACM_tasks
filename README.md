@@ -62,3 +62,15 @@ This function performs the login operation to the captive portal using the provi
 
 - If you encounter any issues with the script, please ensure that the `credentials.txt` file is correctly formatted and contains valid credentials.
 - Ensure that the Wi-Fi network you are connecting to redirects to a login page (captive portal).
+
+## HOW TO AUTOMATE THIS TASK:
+
+You can use the Windows Task Scheduler to run your Python script at startup:
+
+1. Search for "Task Scheduler" in the Windows search bar and open it.
+2. In the Task Scheduler window, click on "Create Basic Task" on the right-hand side.
+3. Name your task and provide a description, then click "Next."
+4. Choose "When the computer starts" as the trigger and click "Next."
+5. Select "Start a program" as the action and click "Next."
+6. Browse and select the Python executable (`python.exe`) and in the "Add arguments" field, specify the path to your Python script.
+7. Click "Next" and then "Finish" to create the task.
